@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Prayush Technology</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- ICONS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+/>
+
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/css/intlTelInput.css"
+/>
+  
+</head>
+<body>
+    <!-- NAVBAR -->
+
+  <header class="navbar">
+    <div class="logo-section">
+      <img src="images/logo.png" alt="Logo">
+    
+      <h2>Prayush Technology</h2>
+    </div>
+
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#careers">Careers</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+     </div>
+
+    <button class="contact-btn" id="openModal">
+      Contact Us
+    </button>
+  </header>
+
+  <!-- HERO SECTION -->
+   <!-- HERO SECTION -->
+<section class="hero" id="home">
+
+  <!-- LEFT -->
+  <div class="hero-left">
+
+    <span class="tag">
+      Modern Digital Solutions
+    </span>
+
+    <h1 class="hero-title">
+      IT STAFF
+      <span>AUGMENTATION</span>
+    </h1>
+
+    <p>
+      Scale your team with top-tier tech talent.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="/#services">
+
+  <button class="primary-btn">
+    Get Started
+  </button>
+
+</a>
+      <button class="consult-btn">
+        Book Consultation
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="hero-right">
+    <img src="images/logo.png" alt="Hero Image">
+  </div>
+
+</section>
+
+  <!-- SERVICES -->
+   <!-- SERVICES -->
+
+<section class="services section reveal" id="services">
+
+  <div class="container">
+
+    <!-- SECTION HEADER -->
+
+    <div class="section-header">
+
+      <h2>Our Services</h2>
+
+      <p>
+        Delivering scalable and high-performance digital solutions
+      </p>
+
+    </div>
+
+    <!-- SERVICES WRAPPER -->
+
+    <div class="services-wrapper">
+
+      <!-- LEFT SIDE TABS -->
+
+      <div class="services-tabs">
+
+        <button
+          class="service-tab active"
+          data-service="web"
+        >
+          <i class="fa-solid fa-globe"></i>
+          Website Development
+        </button>
+
+        <button
+          class="service-tab"
+          data-service="app"
+        >
+          <i class="fa-solid fa-mobile-screen"></i>
+          Application Development
+        </button>
+
+        <button
+          class="service-tab"
+          data-service="salesforce"
+        >
+          <i class="fa-solid fa-cloud"></i>
+          Salesforce Development
+        </button>
+
+        <button
+          class="service-tab"
+          data-service="staff"
+        >
+          <i class="fa-solid fa-users"></i>
+          IT Staff Augmentation
+        </button>
+
+        <button
+          class="service-tab"
+          data-service="dummy"
+        >
+          <i class="fa-solid fa-layer-group"></i>
+          Dummy Service
+        </button>
+
+      </div>
+
+      <!-- RIGHT SIDE CONTENT -->
+
+      <div
+        class="services-content"
+        id="servicesContent"
+      >
+
+        <!-- DYNAMICALLY FILLED -->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- TECHNOLOGIES -->
+
+
+<section class="technologies-section reveal" id="technologies">
+
+  <div class="tech-header">
+
+    <h2>Technology We Cover</h2>
+
+    <p>
+      Explore our expertise across modern technologies.
+    </p>
+
+  </div>
+
+  <!-- CATEGORY BUTTONS -->
+
+  <div class="tech-categories">
+
+    <button class="tech-tab active" data-category="frontend">
+      Frontend
+    </button>
+
+    <button class="tech-tab" data-category="backend">
+      Backend
+    </button>
+
+    <button class="tech-tab" data-category="fullstack">
+      Full Stack
+    </button>
+
+    <button class="tech-tab" data-category="mobile">
+      Mobile App
+    </button>
+
+    <button class="tech-tab" data-category="ai">
+      AI / ML
+    </button>
+
+    <button class="tech-tab" data-category="cloud">
+      Cloud & DevOps
+    </button>
+
+    <button class="tech-tab" data-category="database">
+      Database
+    </button>
+
+  </div>
+
+  <!-- TECHNOLOGY GRID -->
+
+  <div class="tech-grid" id="techGrid">
+
+    <!-- DYNAMICALLY FILLED -->
+
+  </div>
+
+</section>
+
+  <!-- ABOUT -->
+
+  <!-- ========================= -->
+<!-- ABOUT US -->
+<!-- ========================= -->
+
+<section class="about section" id="about">
+
+  <div class="section-header">
+
+    <h2>
+      About Us
+    </h2>
+
+    <p>
+      Empowering businesses through modern technology,
+      scalable solutions and digital transformation.
+    </p>
+
+  </div>
+
+  <div class="about-container">
+
+    <!-- LEFT CONTENT -->
+
+    <div class="about-content reveal">
+
+      <h3>
+        We Build Future-Ready Digital Solutions
+      </h3>
+
+      <p>
+        Prayush Technology is a modern IT and consulting
+        company focused on delivering scalable software,
+        web applications and digital transformation
+        solutions for startups, businesses and enterprises.
+      </p>
+
+      <p>
+        We specialize in frontend engineering, backend
+        systems, cloud-ready architecture, UI/UX design,
+        automation and enterprise-grade web development.
+      </p>
+
+      <p>
+        Our goal is to help businesses grow with
+        technology that is fast, secure, scalable and
+        user-focused.
+      </p>
+
+      <!-- STATS -->
+
+      <div class="about-stats">
+
+        <div class="stat-box">
+          <h4>10+</h4>
+          <p>Technologies</p>
+        </div>
+
+        <div class="stat-box">
+          <h4>24/7</h4>
+          <p>Support</p>
+        </div>
+
+        <div class="stat-box">
+          <h4>100%</h4>
+          <p>Client Focused</p>
+        </div>
+
+      </div>
+
+      <!-- BUTTONS -->
+
+      <div class="about-buttons">
+
+        <a href="#services">
+          <button class="primary-btn">
+            Explore Services
+          </button>
+        </a>
+
+        <a href="#contact">
+          <button class="secondary-btn">
+            Let's Connect
+          </button>
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+
+    <div class="about-cards reveal">
+
+      <div class="about-card">
+
+        <i class="fa-solid fa-code"></i>
+
+        <h4>
+          Modern Development
+        </h4>
+
+        <p>
+          Scalable applications using latest
+          technologies and best practices.
+        </p>
+
+      </div>
+
+      <div class="about-card">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <h4>
+          Secure Solutions
+        </h4>
+
+        <p>
+          Production-ready architecture with
+          security-first development.
+        </p>
+
+      </div>
+
+      <div class="about-card">
+
+        <i class="fa-solid fa-layer-group"></i>
+
+        <h4>
+          Scalable Architecture
+        </h4>
+
+        <p>
+          Systems designed for future business
+          growth and expansion.
+        </p>
+
+      </div>
+
+      <div class="about-card">
+
+        <i class="fa-solid fa-headset"></i>
+
+        <h4>
+          IT Consulting
+        </h4>
+
+        <p>
+          Strategic technical guidance for
+          startups and growing businesses.
+        </p>
+
+      </div>
+      
+
+    </div>
+    <!-- PROVEN EXPERTISE -->
+
+    <!-- WHY CHOOSE US -->
+
+<!-- WHY CHOOSE US HEADING -->
+
+<div class="why-business-heading">
+
+  <h3>
+    Why Businesses Choose Us
+  </h3>
+
+  <p>
+    Delivering scalable solutions, reliable execution
+    and long-term technology partnerships.
+  </p>
+
+</div>
+
+<div class="about-card">
+
+  <i class="fa-solid fa-award"></i>
+
+  <h4>
+    Proven Expertise
+  </h4>
+
+  <p>
+    Successfully delivering scalable digital
+    solutions using modern technologies
+    and industry-focused development.
+  </p>
+
+</div>
+
+<!-- STREAMLINED ONBOARDING -->
+
+<div class="about-card">
+
+  <i class="fa-solid fa-user-check"></i>
+
+  <h4>
+    Streamlined Talent Onboarding
+  </h4>
+
+  <p>
+    Efficient onboarding process with
+    carefully selected developers aligned
+    with your project requirements.
+  </p>
+
+</div>
+
+<!-- CUSTOM ENGAGEMENT -->
+
+<div class="about-card">
+
+  <i class="fa-solid fa-sliders"></i>
+
+  <h4>
+    Custom Engagement Plans
+  </h4>
+
+  <p>
+    Flexible collaboration models including
+    hourly, part-time and full-time engagement.
+  </p>
+
+</div>
+
+<!-- DEADLINE DRIVEN -->
+
+<div class="about-card">
+
+  <i class="fa-solid fa-clock"></i>
+
+  <h4>
+    Deadline-Driven Execution
+  </h4>
+
+  <p>
+    Agile workflows ensuring timely delivery
+    while maintaining quality and scalability.
+  </p>
+
+</div>
+
+<!-- NDA -->
+
+<div class="about-card">
+
+  <i class="fa-solid fa-file-shield"></i>
+
+  <h4>
+    NDA-Protected Contract
+  </h4>
+
+  <p>
+    Secure and confidential development
+    processes protecting your business ideas
+    and intellectual property.
+  </p>
+
+</div>
+
+<!-- REPLACEMENT -->
+
+<div class="about-card">
+
+  <i class="fa-solid fa-rotate"></i>
+
+  <h4>
+    Resource Replacement Guarantee
+  </h4>
+
+  <p>
+    Quick replacement support ensuring
+    continuity, accountability and
+    uninterrupted project execution.
+  </p>
+
+</div>
+
+  </div>
+
+</section>
+
+  <!-- CAREERS -->
+     <section class="careers reveal" id="careers">
+    <h2>Careers</h2>
+
+    <form class="career-form" id="careerForm" novalidate>
+
+  <input type="text" id="careerName" placeholder="Full Name">
+  <small class="error-message"></small>
+
+  <input type="email" id="careerEmail" placeholder="Email">
+  <small class="error-message"></small>
+
+  <input type="tel" id="careerPhone" placeholder="Mobile Number">
+  <small class="error-message"></small>
+
+  <textarea id="careerMessage" placeholder="Why should we hire you?"></textarea>
+  <small class="error-message"></small>
+
+  <input type="file" id="careerResume" name="resume">
+  <small class="error-message"></small>
+
+  <button type="submit">
+    Submit Application
+  </button>
+
+  <div class="success-message" id="careerSuccess">
+    Application submitted successfully!
+  </div>
+
+</form>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="footer-grid">
+            <div>
+        <h3>Prayush Technology</h3>
+        <p>Building modern digital experiences.</p>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>abc@gmail.com</p>
+        <p>1234567890</p>
+        <p>geue</p>
+      </div>
+
+      <div class="footer-policies">
+  <h4>Policies</h4>
+
+  <a href="#" id="privacyPolicyBtn">
+    Privacy Policy
+  </a>
+
+  <a href="#" id="termsPolicyBtn">
+    Terms of Service
+  </a>
+
+  <a href="#" id="refundPolicyBtn">
+    Refund Policy
+  </a>
+</div>
+
+      <div>
+        <h4>Social Media</h4>
+
+        <div class="social-icons">
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-github"></i>
+        </div>
+      </div>
+
+    </div>
+     <p>
+      © 2025 Your Company. All Rights Reserved.
+    </p>
+  </footer>
+
+  <!-- CONTACT MODAL -->
+
+  <div class="modal" id="contactModal">
+    <div class="modal-content">
+
+      <span class="close-btn" id="closeModal">&times;</span>
+
+      <h2>Contact Us</h2>
+
+      <form id="contactForm" novalidate>
+
+  <input type="text" id="contactName" placeholder="Name">
+  <small class="error-message"></small>
+
+  <input type="email" id="contactEmail" placeholder="Email">
+  <small class="error-message"></small>
+
+  <input type="tel" id="contactPhone" placeholder="Mobile Number">
+  <small class="error-message"></small>
+
+  <textarea id="contactQuery" placeholder="Your Query"></textarea>
+  <small class="error-message"></small>
+
+  <input type="file" id="contactAttachment">
+  <small class="error-message"></small>
+
+  <button type="submit">
+    Submit
+  </button>
+
+  <div class="success-message" id="contactSuccess">
+    Query submitted successfully!
+  </div>
+
+</form>
+    </div>
+  </div>
+
+
+ <!-- POLICY MODAL -->
+
+<div class="policy-modal" id="policyModal">
+
+  <div class="policy-modal-content">
+
+    <span class="close-policy-modal" id="closePolicyModal">
+      &times;
+    </span>
+
+    <div id="policyContent"></div>
+
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/intlTelInput.min.js"></script>
+ <script src="/js/script.js"></script>
+
+</body>
+</html>
