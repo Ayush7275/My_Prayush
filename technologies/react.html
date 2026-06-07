@@ -365,9 +365,9 @@
       <div>
         <h4>Policies</h4>
 
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Refund Policy</a>
+        <a href="#" id="privacyPolicyBtn">Privacy Policy</a>
+<a href="#" id="termsPolicyBtn">Terms of Service</a>
+<a href="#" id="refundPolicyBtn">Refund Policy</a>
       </div>
 
       <div>
@@ -427,6 +427,22 @@
 </form>
     </div>
   </div>
+
+   <!-- POLICY MODAL -->
+
+<div class="policy-modal" id="policyModal">
+
+  <div class="policy-modal-content">
+
+    <span class="close-policy-modal" id="closePolicyModal">
+      &times;
+    </span>
+
+    <div id="policyContent"></div>
+
+  </div>
+
+</div>
  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/intlTelInput.min.js"></script>
   <!-- MAIN JS -->
   <script src="/js/script.js"></script>

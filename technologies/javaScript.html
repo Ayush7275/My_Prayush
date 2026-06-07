@@ -148,60 +148,106 @@
   <button class="contact-btn" id="openModal">Let's Build</button>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div>
-      <h3>Prayush Technology</h3>
-      <p>Building modern digital experiences.</p>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <p>abc@gmail.com</p>
-      <p>1234567890</p>
-      <p>India</p>
-    </div>
-    <div>
-      <h4>Policies</h4>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-      <a href="#">Refund Policy</a>
-    </div>
-    <div>
-      <h4>Social Media</h4>
-      <div class="social-icons">
-        <i class="fab fa-linkedin"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-github"></i>
-      </div>
-    </div>
-  </div>
-  <p>© 2025 Prayush Technology. All Rights Reserved.</p>
-</footer>
+ <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- ========================= -->
 
-<!-- CONTACT MODAL -->
-<div class="modal" id="contactModal">
-  <div class="modal-content">
-    <span class="close-btn" id="closeModal">&times;</span>
-    <h2>Contact Us</h2>
-    <form id="contactForm" novalidate>
-      <input type="text" id="contactName" placeholder="Name">
-      <small class="error-message"></small>
-      <input type="email" id="contactEmail" placeholder="Email">
-      <small class="error-message"></small>
-      <input type="tel" id="contactPhone" placeholder="Mobile Number">
-      <small class="error-message"></small>
-      <textarea id="contactQuery" placeholder="Your Query"></textarea>
-      <small class="error-message"></small>
-      <button type="submit">Submit</button>
-      <div class="success-message" id="contactSuccess">
-        Query submitted successfully!
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="footer-grid">
+            <div>
+        <h3>Prayush Technology</h3>
+        <p>Building modern digital experiences.</p>
       </div>
-    </form>
+
+      <div>
+        <h4>Contact</h4>
+        <p>abc@gmail.com</p>
+        <p>1234567890</p>
+        <p>geue</p>
+      </div>
+
+      <div>
+        <h4>Policies</h4>
+
+        <a href="#" id="privacyPolicyBtn">Privacy Policy</a>
+<a href="#" id="termsPolicyBtn">Terms of Service</a>
+<a href="#" id="refundPolicyBtn">Refund Policy</a>
+      </div>
+
+      <div>
+        <h4>Social Media</h4>
+
+        <div class="social-icons">
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-github"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <p>
+      © 2025 Your Company. All Rights Reserved.
+    </p>
+
+  </footer>
+
+  <!-- CONTACT MODAL -->
+
+  <div class="modal" id="contactModal">
+    <div class="modal-content">
+
+      <span class="close-btn" id="closeModal">&times;</span>
+
+      <h2>Contact Us</h2>
+
+      <form id="contactForm" novalidate>
+
+  <input type="text" id="contactName" placeholder="Name">
+  <small class="error-message"></small>
+
+  <input type="email" id="contactEmail" placeholder="Email">
+  <small class="error-message"></small>
+
+  <input type="tel" id="contactPhone" placeholder="Mobile Number">
+  <small class="error-message"></small>
+
+  <textarea id="contactQuery" placeholder="Your Query"></textarea>
+  <small class="error-message"></small>
+
+  <input type="file" id="contactAttachment">
+  <small class="error-message"></small>
+
+  <button type="submit">
+    Submit
+  </button>
+
+  <div class="success-message" id="contactSuccess">
+    Query submitted successfully!
   </div>
-</div>
+
+</form>
+    </div>
+  </div>
+
+   <!-- POLICY MODAL -->
+
+<div class="policy-modal" id="policyModal">
+
+  <div class="policy-modal-content">
+
+    <span class="close-policy-modal" id="closePolicyModal">
+      &times;
+    </span>
+
+    <div id="policyContent"></div>
+
+  </div>
 
 <!-- PHONE INPUT -->
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/intlTelInput.min.js"></script>

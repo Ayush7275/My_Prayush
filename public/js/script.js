@@ -891,6 +891,8 @@ const techGrid =
 
 function renderTechnologies(category) {
 
+  if (!techGrid) return;
+
   techGrid.innerHTML = "";
 
   technologies[category].forEach((tech) => {
@@ -900,12 +902,14 @@ function renderTechnologies(category) {
 
     card.classList.add("tech-card");
 
-   card.innerHTML = ` <i class="${tech.icon}"></i> <h3>${tech.name}</h3> <p>${tech.desc}</p> `;
+    card.innerHTML = `
+      <i class="${tech.icon}"></i>
+      <h3>${tech.name}</h3>
+      <p>${tech.desc}</p>
+    `;
 
     card.addEventListener("click", () => {
-
       window.location.href = tech.link;
-
     });
 
     techGrid.appendChild(card);
@@ -917,25 +921,33 @@ function renderTechnologies(category) {
 
 // DEFAULT
 
-renderTechnologies("frontend");
+if (techGrid) {
+  renderTechnologies("frontend");
+}
 
 // TAB SWITCH
 
-techTabs.forEach((tab) => {
+if (techGrid && techTabs.length) {
 
-  tab.addEventListener("click", () => {
+  techTabs.forEach((tab) => {
 
-    techTabs.forEach((btn) => {
-      btn.classList.remove("active");
+    tab.addEventListener("click", () => {
+
+      techTabs.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      tab.classList.add("active");
+
+      renderTechnologies(
+        tab.dataset.category
+      );
+
     });
 
-    tab.classList.add("active");
-
-    renderTechnologies(
-      tab.dataset.category
-    );
   });
-});
+
+}
 
 
 const servicesData = {
@@ -1009,6 +1021,7 @@ const serviceTabs = document.querySelectorAll(".service-tab");
 const servicesContent = document.getElementById("servicesContent");
 
 function renderService(serviceKey) {
+  if (!servicesContent) return;
   const service = servicesData[serviceKey];
 
   servicesContent.innerHTML = `
@@ -1056,7 +1069,9 @@ serviceTabs.forEach((tab) => {
   });
 });
 
-renderService("web");
+if (servicesContent) {
+  renderService("web");
+}
 
 
 // ======================================
@@ -1083,132 +1098,302 @@ const refundBtn =
 
 // OPEN PRIVACY POLICY
 
+// OPEN PRIVACY POLICY
+
 if (privacyBtn) {
-
   privacyBtn.addEventListener("click", (e) => {
-
     e.preventDefault();
 
     policyContent.innerHTML = `
-
       <h2>Privacy Policy</h2>
+      <p><strong>Effective Date:</strong> June 7, 2026</p>
 
       <p>
-        This Privacy Policy explains how Prayush Technology collects,
-        uses, shares and protects your personal information.
+        This Privacy Policy explains how Prayush Technology (“we,” “our,” or “us”) collects, uses, shares, and protects your personal data when you interact with us via our website or through lead generation forms on LinkedIn and similar platforms.
+      </p>
+
+      <p>
+        By using our website or submitting your information through LinkedIn or any other medium, you agree to the terms outlined in this Privacy Policy.
       </p>
 
       <h3>Information We Collect</h3>
-
       <ul>
         <li>Full Name</li>
         <li>Email Address</li>
         <li>Phone Number</li>
         <li>Company Name</li>
+        <li>Job Title</li>
+        <li>Location</li>
+        <li>LinkedIn Profile URL (if submitted through lead forms)</li>
+        <li>Other information you provide via contact forms, inquiries, or LinkedIn lead generation ads</li>
       </ul>
+      <p>We may also collect non-identifiable data using cookies or analytics tools.</p>
 
       <h3>How We Use Your Information</h3>
+      <ul>
+        <li>To respond to your inquiries and requests</li>
+        <li>To send information about our services, pricing, or business proposals</li>
+        <li>To follow up with you regarding demos or consultations</li>
+        <li>To personalize your experience with us</li>
+        <li>To improve our marketing, sales, and customer support services</li>
+        <li>To comply with applicable legal obligations</li>
+      </ul>
+      <p>You may opt-out of non-essential communications at any time by contacting us.</p>
 
+      <h3>Data Sharing and Third-Party Tools</h3>
+      <p>We do not sell your personal information. However, we may share your data under the following conditions:</p>
+      <ul>
+        <li>With our internal team members who need access for service fulfillment</li>
+        <li>With trusted third-party service providers like CRM platforms (e.g., HubSpot, Salesforce), marketing automation tools, and website analytics services (e.g., Google Analytics)</li>
+        <li>If required by law or to comply with a legal process</li>
+        <li>In the event of a merger, acquisition, or sale of Prayush Technology assets</li>
+      </ul>
+
+      <h3>Cookies and Analytics</h3>
       <p>
-        We use your information to respond to inquiries,
-        improve our services and provide business communication.
+        We use cookies and similar tracking technologies to enhance user experience, measure website traffic, and evaluate the effectiveness of our marketing campaigns. You may control cookie settings through your browser preferences. Disabling cookies may limit your experience on our website.
+      </p>
+      <p>
+        We also use Google Analytics and other tools to collect aggregated, anonymized data about site usage, which helps us improve our offerings.
+      </p>
+
+      <h3>Your Rights</h3>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
+        <li><strong>Correction:</strong> Ask us to update or correct inaccurate information.</li>
+        <li><strong>Deletion:</strong> Request deletion of your data, subject to legal retention obligations.</li>
+        <li><strong>Objection:</strong> Object to certain types of data processing (e.g., marketing).</li>
+      </ul>
+      <p>To exercise any of the above rights, please email us at <strong>contact@prayush.com</strong>. We respond within a reasonable timeframe in accordance with applicable data protection laws.</p>
+
+      <h3>Data Retention and Security</h3>
+      <p>
+        We retain personal data only as long as necessary for business, legal, or regulatory purposes. All personal data is stored securely with safeguards to protect against unauthorized access, alteration, disclosure, or destruction. Access is restricted to authorized personnel only. If required by law, we may retain certain information for a minimum of five years.
+      </p>
+
+      <h3>Changes to This Privacy Policy</h3>
+      <p>
+        We may update this Privacy Policy occasionally to reflect changes in our practices or legal obligations. When we do, we will update the "Effective Date" at the top of this page. We encourage you to review this page periodically to stay informed.
       </p>
 
       <h3>Contact Us</h3>
-
       <p>
-        Email: contact@prayush.com
+        If you have any questions, requests, or concerns regarding this Privacy Policy or your personal data, please contact us at:
       </p>
+      <p>Email: <strong>contact@prayush.com</strong><br>
+      Contact: <strong>+91 8604917410</strong></p>
     `;
 
     policyModal.style.display = "block";
   });
 }
+
+
+// OPEN TERMS POLICY
 
 // OPEN TERMS POLICY
 
 if (termsBtn) {
-
   termsBtn.addEventListener("click", (e) => {
-
     e.preventDefault();
 
     policyContent.innerHTML = `
-
       <h2>Terms of Service</h2>
+      <p><strong>Effective Date:</strong> June 7, 2026</p>
 
+      <h3>Overview</h3>
       <p>
-        By using this website and our services,
-        you agree to comply with all terms and conditions.
+        This website is operated by Prayush Technology. Throughout the site, the terms “we”, “us” and “our” refer to Prayush Technology. 
+        By accessing or using our website and services, you agree to be bound by these Terms of Service (“Terms”).
+      </p>
+      <p>
+        These Terms govern your use of our website and the services made available through it, including any purchases made via the Razorpay payment gateway.
       </p>
 
-      <h3>Payment Terms</h3>
+      <h3>Eligibility</h3>
+      <ul>
+        <li>You are at least the age of majority in your jurisdiction.</li>
+        <li>You are legally capable of entering into binding contracts.</li>
+        <li>You are not prohibited from using the website under any applicable laws.</li>
+      </ul>
 
+      <h3>Payment Terms</h3>
       <p>
-        All payments are securely processed through Razorpay.
+        All payments on the website are processed securely through Razorpay. We do not store your credit/debit card or UPI information. 
+        By providing your payment details, you authorize us and Razorpay to charge the applicable fees for any product or service you purchase.
+      </p>
+      <p>
+        In case of payment failures or unauthorized transactions, Razorpay’s dispute resolution policy will apply.
+      </p>
+
+      <h3>Account & Billing Information</h3>
+      <ul>
+        <li>Provide current, complete, and accurate information for all purchases.</li>
+        <li>Update your account details promptly, including email, billing address, and payment information.</li>
+        <li>We reserve the right to refuse or cancel any orders.</li>
+      </ul>
+
+      <h3>Product & Service Descriptions</h3>
+      <p>
+        We make every effort to display products and services accurately. However, we do not guarantee that descriptions, pricing, or availability will always be error-free or up to date.
+      </p>
+      <ul>
+        <li>Modify or discontinue any product or service.</li>
+        <li>Limit quantities sold.</li>
+        <li>Correct errors without prior notice.</li>
+      </ul>
+
+      <h3>Refunds and Cancellations</h3>
+      <p>
+        Refunds and cancellations are governed by our Refund & Cancellation Policy. All requests must comply with timelines and conditions specified in that policy.
+      </p>
+      <p>
+        If payment was made via Razorpay, refunds (if applicable) will be processed back through Razorpay.
       </p>
 
       <h3>Use Restrictions</h3>
-
       <ul>
         <li>No unlawful usage</li>
         <li>No unauthorized access attempts</li>
-        <li>No harmful activities</li>
+        <li>No harmful activities (e.g., transmitting viruses or malicious code)</li>
+        <li>No violation of applicable local, national, or international law</li>
       </ul>
 
-      <h3>Contact Us</h3>
-
+      <h3>Intellectual Property</h3>
       <p>
-        Email: contact@prayush.com
+        All content including logos, text, graphics, and software is the property of Prayush Technology or its licensors. 
+        You may not copy, reproduce, or redistribute any part of the content without our express written permission.
       </p>
+
+      <h3>Limitation of Liability</h3>
+      <p>
+        We are not liable for any indirect, incidental, special, or consequential damages arising out of your use of this website or any services/products.
+      </p>
+
+      <h3>Indemnification</h3>
+      <p>
+        You agree to indemnify and hold harmless Prayush Technology, its directors, officers, and affiliates from any claims or liabilities arising out of your use of the website, breach of Terms, or violation of law or third-party rights.
+      </p>
+
+      <h3>Governing Law</h3>
+      <p>
+        These Terms are governed by the laws of India. The courts in Gurugram, Haryana shall have exclusive jurisdiction over any dispute arising out of the use of this website.
+      </p>
+
+      <h3>Changes to These Terms</h3>
+      <p>
+        We reserve the right to update or modify these Terms at any time. Any changes will be posted on this page. 
+        Continued use of the website following such changes constitutes your agreement to the revised Terms.
+      </p>
+
+      <h3>Contact Us</h3>
+      <p>
+        If you have any questions, requests, or concerns regarding these Terms of Service, please contact us at:
+      </p>
+      <p>Email: <strong>contact@prayush.com</strong><br>
+      Contact: <strong>+91 8604917410</strong></p>
     `;
 
     policyModal.style.display = "block";
   });
 }
+
+
+// OPEN REFUND POLICY
 
 // OPEN REFUND POLICY
 
 if (refundBtn) {
-
   refundBtn.addEventListener("click", (e) => {
-
     e.preventDefault();
 
     policyContent.innerHTML = `
-
       <h2>Refund Policy</h2>
+      <p><strong>Effective Date:</strong> June 7, 2026</p>
 
+      <h3>Overview</h3>
       <p>
-        Due to the nature of IT services,
-        payments are generally non-refundable.
+        At Prayush Technologies Pvt. Ltd., we are committed to delivering high-quality IT services including mobile application development, web development, UI/UX design, and software consultation. 
+        Due to the nature of our services, all payments made to us are final and non-refundable, except in limited circumstances explicitly stated in this policy.
+      </p>
+      <p>
+        By engaging our services, the client agrees to the terms outlined below and understands that once a project or milestone is initiated, refund requests will not be entertained without substantial and documented justification.
       </p>
 
-      <h3>Eligible Refund Cases</h3>
-
+      <h3>General Policy – No Refunds</h3>
+      <p>
+        We follow a milestone-based payment structure governed by mutually agreed deliverables. Once a milestone is initiated or delivered, it is considered non-refundable. Payments made toward:
+      </p>
       <ul>
-        <li>Duplicate payments</li>
-        <li>Project non-initiation</li>
+        <li>Project Discovery or Consultation</li>
+        <li>Design Phase</li>
+        <li>Development Sprints</li>
+        <li>Source Code Releases</li>
+        <li>Dedicated Resources (Developers, Designers, PMs, QA, etc.)</li>
+        <li>Third-party License Procurements or Integrations</li>
+      </ul>
+      <p>...are strictly non-refundable, regardless of project continuation or client satisfaction, except where explicitly stated otherwise.</p>
+
+      <h3>Exceptions – Eligible Scenarios for Partial Refunds</h3>
+      <ul>
+        <li><strong>Project Non-Initiation:</strong> If the client has made an upfront payment and the project has not commenced within 15 working days from the agreed start date, and no effort or man-hours have been allocated, a partial refund (up to 50%) may be issued after deducting administrative and planning costs.</li>
+        <li><strong>Duplicate Payment:</strong> If a client makes a payment twice for the same invoice or transaction, the extra amount will be refunded after validation.</li>
+        <li><strong>Technical Infeasibility (Pre-Development Only):</strong> If after a thorough discovery phase it is found that a promised feature is technically unfeasible and Prayush Technology chooses not to proceed, a proportional refund for that feature scope may be issued.</li>
+      </ul>
+      <p><em>Note:</em> Refund decisions will be made only after internal review and approval by the operations and finance team.</p>
+
+      <h3>Non-Eligible Scenarios for Refunds</h3>
+      <ul>
+        <li>Change of mind or change in business direction after project commencement</li>
+        <li>Communication gaps or delays caused by the client</li>
+        <li>Failure to provide required content, feedback, or approvals</li>
+        <li>Delay in project delivery due to client-side dependencies</li>
+        <li>Dissatisfaction based on subjective expectations (e.g., design tastes, aesthetics)</li>
+        <li>Partial completion or rejection of features without valid reason or against prior scope agreement</li>
+        <li>Claims made after 30 days of milestone delivery from Prayush Technology</li>
       </ul>
 
-      <h3>Non-Refundable Cases</h3>
-
+      <h3>Service Cancellation</h3>
+      <p>
+        If the client chooses to terminate the project midway:
+      </p>
       <ul>
-        <li>Change of mind</li>
-        <li>Client-side delays</li>
-        <li>Completed milestones</li>
+        <li>All completed work up to the date of cancellation must be paid in full.</li>
+        <li>All intellectual property and source code rights will be withheld until outstanding dues are cleared.</li>
+        <li>No refunds will be processed for milestones already delivered or initiated.</li>
       </ul>
+
+      <h3>Dispute Resolution</h3>
+      <p>
+        In case of a payment dispute, Prayush Technology encourages open communication. Clients may write to <strong>contact@prayush.com</strong> with a clear explanation and supporting evidence. 
+        We aim to respond within 7 business days. Any legal dispute, if escalated, will fall under the jurisdiction of India, as per our governing laws.
+      </p>
+
+      <h3>Payment Method & Refund Processing Time</h3>
+      <p>
+        All payments must be made via officially invoiced bank transfers, Razorpay, or approved gateways only. 
+        Any approved refund (if applicable) will be processed via the original method of payment within 30 working days after approval. 
+        Prayush Technology will not be liable for delays caused by the payment gateway or intermediary banks.
+      </p>
+
+      <h3>Changes to This Policy</h3>
+      <p>
+        Prayush Technology reserves the right to modify this Refund Policy at any time without prior notice. 
+        It is the client’s responsibility to review the most updated version before engaging our services.
+      </p>
 
       <h3>Contact Us</h3>
-
       <p>
-        Email: contact@prayush.com
+        If you have any questions, requests, or concerns regarding this Refund Policy, please contact us at:
       </p>
+      <p>Email: <strong>contact@prayush.com</strong><br>
+      Contact: <strong>+91 8604917410</strong></p>
     `;
 
     policyModal.style.display = "block";
   });
 }
+
 
 // CLOSE MODAL
 
