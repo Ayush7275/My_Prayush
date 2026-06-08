@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prayush Technology - React Native</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/css/intlTelInput.css"/>
+</head>
+<body>
+<header class="navbar">
+  <div class="logo-section">
+      <img src="/images/logo.png" alt="Logo">
+      <h2>Prayush Technology</h2>
+  </div>
+  <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+  <nav class="nav-links" id="navLinks">
+    <a href="/">Home</a>
+    <a href="/#services">Services</a>
+    <a href="/#technologies">Technologies</a>
+    <a href="/#careers">Careers</a>
+    <a href="/#about">About Us</a>
+    <a href="#" id="openModalNav">Contact</a>
+  </nav>
+</header>
+
+<section class="tech-hero">
+  <div class="tech-hero-content">
+    <div class="tech-icon"><i class="devicon-react-original"></i></div>
+    <h1>React Native Development Services</h1>
+    <p>Deliver high‑performance mobile apps for iOS and Android with React Native’s cross‑platform capabilities.</p>
+    <a href="/views/index.html#contact"><button class="primary-btn">Start Your Project</button></a>
+  </div>
+</section>
+
+<section class="tech-about reveal">
+  <div class="tech-container">
+    <div class="tech-about-text">
+      <h2>Why React Native?</h2>
+      <p>React Native allows developers to build mobile applications using JavaScript and React, with native performance and a shared codebase.</p>
+      <p>We create scalable, cost‑effective, and feature‑rich mobile apps with React Native to accelerate your digital transformation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tech-features reveal">
+  <div class="section-header">
+    <h2>Key Features</h2>
+    <p>Why businesses choose React Native development.</p>
+  </div>
+  <div class="feature-grid">
+    <div class="feature-card"><i class="fa-solid fa-mobile"></i><h3>Cross‑Platform</h3><p>Single codebase for iOS and Android.</p></div>
+    <div class="feature-card"><i class="fa-solid fa-bolt"></i><h3>Fast Development</h3><p>Hot reload for instant updates.</p></div>
+    <div class="feature-card"><i class="fa-solid fa-code"></i><h3>Native Performance</h3><p>Access to native APIs and modules.</p></div>
+  </div>
+</section>
+
+<section class="react-services reveal">
+  <div class="section-header"><h2>React Native Services We Offer</h2></div>
+  <div class="services-grid">
+    <div class="service-box">Cross‑Platform Mobile App Development</div>
+    <div class="service-box">Custom UI/UX Design</div>
+    <div class="service-box">API & Third‑Party Integration</div>
+    <div class="service-box">Enterprise Mobile Solutions</div>
+    <div class="service-box">Migration to React Native</div>
+    <div class="service-box">Performance Optimization</div>
+  </div>
+</section>
+
+<section class="development-process reveal">
+  <div class="section-header"><h2>Our Development Process</h2></div>
+  <div class="process-grid">
+    <div class="process-card"><span>01</span>Planning</div>
+    <div class="process-card"><span>02</span>UI/UX Design</div>
+    <div class="process-card"><span>03</span>Development</div>
+    <div class="process-card"><span>04</span>Testing</div>
+    <div class="process-card"><span>05</span>Deployment</div>
+  </div>
+</section>
+
+<section class="tech-cta">
+  <h2>Ready To Build Your React Native Project?</h2>
+  <p>Let’s create powerful, cross‑platform mobile applications together.</p>
+  <button class="contact-btn" id="openModal">Let's Build</button>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><h3>Prayush Technology</h3><p>Building modern digital experiences.</p></div>
+    <div><h4>Contact</h4><p>abc@gmail.com</p><p>1234567890</p><p>geue</p></div>
+    <div><h4>Policies</h4><a href="#" id="privacyPolicyBtn">Privacy Policy</a><a href="#" id="termsPolicyBtn">Terms of Service</a><a href="#" id="refundPolicyBtn">Refund Policy</a></div>
+    <div><h4>Social Media</h4><div class="social-icons"><i class="fab fa-linkedin"></i><i class="fab fa-instagram"></i><i class="fab fa-facebook"></i><i class="fab fa-twitter"></i><i class="fab fa-github"></i></div></div>
+  </div>
+  <p>© 2025 Your Company. All Rights Reserved.</p>
+</footer>
+
+<!-- CONTACT MODAL -->
+<div class="modal" id="contactModal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <h2>Contact Us</h2>
+    <form id="contactForm" novalidate>
+      <input type="text" id="contactName" placeholder="Name"><small class="error-message"></small>
+      <input type="email" id="contactEmail" placeholder="Email"><small class="error-message"></small>
+      <input type="tel" id="contactPhone" placeholder="Mobile Number"><small class="error-message"></small>
+      <textarea id="contactQuery" placeholder="Your Query"></textarea><small class="error-message"></small>
+      <input type="file" id="contactAttachment"><small class="error-message"></small>
+      <button type="submit">Submit</button>
+      <div class="success-message" id="contactSuccess">Query submitted successfully!</div>
+    </form>
+  </div>
+</div>
+
+<!-- POLICY MODAL -->
+<div class="policy-modal" id="policyModal">
+  <div class="policy-modal-content">
+    <span class="close-policy-modal" id="closePolicyModal">&times;</span>
+    <div id="policyContent"></div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/intlTelInput.min.js"></script>
+<script src="/js/script.js"></script>
+</body>
+</html>
